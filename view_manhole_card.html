@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manhole Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.1/dist/bootstrap-table.min.css">
+</head>
+
+<body>
+  <!-- Navigation Bar-->
+  <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Manhole Tracker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" aria-current="page" href="search.html">Search</a>
+          <a class="nav-link active" aria-current="page" href="add_manhole_card.html">Add</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <!-- Manhole Card -->
+  <div class="container bg-secondary-subtle border-dark-subtle rounded">
+    <form class="row g-3">
+      <div class="col-3">
+        <label for="inputAddress" class="form-label">Manhole Number</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="10-897" disabled>
+      </div>
+      <div class="col-md-3">
+        <label for="inputCity" class="form-label">Requestor Full Name</label>
+        <input type="text" class="form-control" id="inputsizeCity" placeholder="" disabled>
+      </div>
+      <div class="col-md-3">
+        <label for="inputCity" class="form-label">Requestor Email</label>
+        <input type="text" class="form-control" id="inputsizeCity" placeholder="" disabled>
+      </div>
+      <div class="col-md-3">
+        <label for="inputCity" class="form-label">Requestor Phone Number</label>
+        <input type="text" class="form-control" id="inputsizeCity" placeholder="" disabled>
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">District</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputAddress" class="form-label">District Number</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1" disabled>
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Town</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputAddress" class="form-label">Town Code</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="119" disabled>
+      </div>
+      <div class="col-2">
+        <label for="inputAddress2" class="form-label">Date</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="" disabled>
+      </div>
+      <div class="col-2">
+        <label for="inputAddress" class="form-label">Line Number</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="345" disabled>
+      </div>
+      <div class="col-8">
+        <label for="inputAddress" class="form-label">Description/Location</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="888 Main St" disabled>
+      </div>
+      <div class="col-md-3">
+        <label for="viewSize" class="form-label">Size</label>
+        <input type="text" class="form-control" id="viewSize" placeholder="L' X W' X H'" disabled>
+      </div>
+      <div class="col-md-3">
+        <label for="inputCity" class="form-label">N.S. Size Designation</label>
+        <input type="text" class="form-control" id="viewSizeDesignation" placeholder="A" disabled>
+      </div>
+      <div class="col-3">
+        <label for="viewType" class="form-label">Type</label>
+        <input type="text" class="form-control" id="viewType" placeholder="Switch Gear" disabled>
+      </div>
+      <div class="col-3">
+        <label for="viewMaterial" class="form-label">Material</label>
+        <input type="text" class="form-control" id="viewMaterial" placeholder="" disabled>
+      </div>
+      <div class="col-4">
+        <label for="viewWorkRequestNumber" class="form-label">Work Request Number</label>
+        <input type="text" class="form-control" id="viewWorkRequestNumber" placeholder="016-78562" disabled>
+      </div>
+      <div class="col-4">
+        <label for="viewConduitPlan" class="form-label">Conduit Plan</label>
+        <input type="text" class="form-control" id="viewConduitPlan" placeholder="02-5782" disabled>
+      </div>
+      <div class="col-4">
+        <label for="viewDesignPlan" class="form-label">Design Plan</label>
+        <input type="text" class="form-control" id="viewDesignPlan" placeholder="759235" disabled>
+      </div>
+      <div class="col-12">
+        <button id="viewLegacyDataButton" type="submit" class="btn btn-primary">View Legacy Data</button>
+      </div>
+      <!-- Legacy Data -->
+      <div class="col-md-3">
+        <label for="viewDrain" class="form-label">Drain</label>
+        <input type="text" class="form-control" id="viewDrain" placeholder="Concrete" disabled>
+      </div>
+      <div class="col-md-3">
+        <label for="viewFloor" class="form-label">Floor</label>
+        <input type="text" class="form-control" id="viewFloor" placeholder="Concrete" disabled>
+      </div>
+      <div class="col-md-2">
+        <label for="viewFrame" class="form-label">Frame</label>
+        <input type="text" class="form-control" id="viewFrame" placeholder="UM 20" disabled>
+      </div>
+      <div class="col-2">
+        <label for="viewCover" class="form-label">Cover</label>
+        <input type="text" class="form-control" id="viewCover" placeholder="Concrete" disabled>
+      </div>
+      <div class="col-2">
+        <label for="viewForeignPipes" class="form-label">Foreign Pipes</label>
+        <input type="text" class="form-control" id="viewForeignPipes" placeholder="" disabled>
+      </div>
+      <div class="col-12">
+        <label for="viewNotes" class="form-label">Notes</label>
+        <input type="text" class="form-control" id="viewNotes" placeholder="" disabled>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Edit</button>
+      </div>
+    </form>
+    <br>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+    integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.1/dist/bootstrap-table.min.js"></script>
+</body>
+
+</html>
